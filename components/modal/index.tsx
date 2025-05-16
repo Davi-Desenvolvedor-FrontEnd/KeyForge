@@ -37,6 +37,7 @@ export default function ModalPassword({ visible, password, onClose }) {
           <TextInput
             style={styles.input}
             placeholder="nome da senha"
+            placeholderTextColor={'#ddd'}
             value={name}
             onChangeText={(text) => setName(text)}
           />
