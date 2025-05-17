@@ -1,8 +1,8 @@
 import { useIsFocused } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import { FlatList, StyleSheet, Text, View } from "react-native";
-import useStorage from "../../hooks/useStorage";
-import PasswordItem from "../../components/password";
+import useStorage from "../hooks/useStorage";
+import PasswordItem from "../components/password";
 
 export default function PasswordScreen() {
   const [listPasswords, setListPasswords] = useState([]);

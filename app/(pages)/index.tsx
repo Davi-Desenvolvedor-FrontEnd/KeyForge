@@ -1,6 +1,6 @@
 import { Pressable, Text, View } from "react-native";
 import { Divider } from "react-native-paper";
-import { estilos } from "../../global_styles/styles";
+import { estilos } from "../global_styles/styles";
 import { router } from "expo-router";
 
 export default function HomeScreen() {

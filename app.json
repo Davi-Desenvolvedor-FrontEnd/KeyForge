@@ -4,11 +4,11 @@
     "slug": "KeyForge",
     "version": "1.0.3",
     "orientation": "portrait",
-    "icon": "./assets/logoApp.png",
+    "icon": "./app/assets/logoApp.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./app/assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,14 +17,14 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/logoApp.png",
+        "foregroundImage": "./app/assets/logoApp.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
       "package": "com.daviaugusto479.KeyForge"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./app/assets/favicon.png"
     },
     "plugins": [
       "expo-router",
