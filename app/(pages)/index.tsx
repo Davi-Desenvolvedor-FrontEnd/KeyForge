@@ -1,6 +1,5 @@
-import { Pressable, Text, TextInput, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import { Divider } from "react-native-paper";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { estilos } from "../../global_styles/styles";
 import { router } from "expo-router";
 

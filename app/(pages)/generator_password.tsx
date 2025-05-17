@@ -4,13 +4,10 @@ import {
   Image,
   StyleSheet,
   Text,
-  TextInput,
   TouchableOpacity,
   View,
 } from "react-native";
 import ModalPassword from "../../components/modal";
-import { Divider } from "react-native-paper";
-import { estilos } from "../../global_styles/styles";
 let charset =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?";
 export default function GereratorPassword() {

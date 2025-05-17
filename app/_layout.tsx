@@ -7,8 +7,6 @@ export default function RootLayout() {
     <>
       <StatusBar backgroundColor={'black'} barStyle="light-content" />
       <View style={styles.container}>
-        {/* StatusBar será renderizada em todas as telas */}
-        {/* Slot renderiza a rota filha—que pode ser o _layout de tabs ou diretamente uma tela */}
         <Slot />
       </View>
     </>

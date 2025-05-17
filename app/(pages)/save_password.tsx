@@ -3,7 +3,7 @@ import { useState } from "react";
 import useStorage from "../../hooks/useStorage";
 import * as Clipboard from "expo-clipboard";
 export default function SavePassword() {
-  const { saveItem, getItem, removeItem } = useStorage();
+  const { saveItem } = useStorage();
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
 
