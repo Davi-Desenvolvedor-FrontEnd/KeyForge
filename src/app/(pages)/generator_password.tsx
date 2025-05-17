@@ -1,10 +1,19 @@
 import Slider from "@react-native-community/slider";
 import { useEffect, useState } from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import ModalPassword from "../../components/modal";
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import ModalPassword from "../../../components/modal";
+import { Divider } from "react-native-paper";
+import { estilos } from "../../global_styles/styles";
 let charset =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?";
-export default function HomeScreen () {
+export default function GereratorPassword() {
   const [size, setSize] = useState(6);
   const [passwordValue, setPasswordValue] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
@@ -23,11 +32,11 @@ export default function HomeScreen () {
   return (
     <View style={styles.container}>
       <Image
-        source={require("../../assets/images/logo.png")}
+        source={require("../../../assets/images/logo.png")}
         style={styles.logo}
       />
-      <Text style={styles.title}>{size} Caracteres</Text>
       <View style={styles.sliderBox}>
+        <Text style={styles.title}>{size} Caracteres</Text>
         <Slider
           style={{ height: 50 }}
           minimumValue={6}
@@ -67,10 +76,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginTop: 20,
     color: "#392DE9",
+    textAlign: "center",
   },
   sliderBox: {
     width: "80%",
-    height: 40,
     justifyContent: "center",
     padding: 8,
     marginTop: 20,

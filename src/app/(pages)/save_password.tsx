@@ -1,18 +1,11 @@
-import {
-  Modal,
-  Pressable,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from "react-native";
-import { Feather } from "@expo/vector-icons";
-import * as Clipboard from "expo-clipboard";
-import useStorage from "../../hooks/useStorage";
+import { TextInput, View, Text, StyleSheet, Pressable } from "react-native";
 import { useState } from "react";
-export default function ModalPassword({ visible, password, onClose }) {
+import useStorage from "../../../hooks/useStorage";
+import * as Clipboard from "expo-clipboard";
+export default function SavePassword() {
   const { saveItem, getItem, removeItem } = useStorage();
   const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleCopyPassword = async () => {
     await Clipboard.setStringAsync(password);
@@ -23,17 +16,21 @@ export default function ModalPassword({ visible, password, onClose }) {
     try {
       await saveItem("@pass", password, name);
       setName("");
-      onClose();
     } catch (error) {
       console.log("Error saving password:", error);
     }
   };
 
   return (
-    <Modal visible={visible} animationType="slide" transparent>
       <View style={styles.container}>
         <View style={styles.box}>
-          <Text style={styles.text}>Senha gerada</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="sua senha"
+            placeholderTextColor={'#666'}
+            value={password}
+            onChangeText={(text) => setPassword(text)}
+          />
           <TextInput
             style={styles.input}
             placeholder="nome da senha"
@@ -41,19 +38,7 @@ export default function ModalPassword({ visible, password, onClose }) {
             value={name}
             onChangeText={(text) => setName(text)}
           />
-          <View style={styles.passwordArea}>
-            <Text style={styles.passwordText}>{password}</Text>
-            <Feather
-              onPress={() => handleCopyPassword()}
-              name="copy"
-              size={24}
-              color="white"
-            />
-          </View>
           <View style={styles.buttonArea}>
-            <Pressable onPress={() => onClose()}>
-              <Text style={styles.textButtonGoBack}>Voltar</Text>
-            </Pressable>
             <Pressable
               style={styles.buttonSave}
               onPress={() => handleSavePassword()}
@@ -63,14 +48,13 @@ export default function ModalPassword({ visible, password, onClose }) {
           </View>
         </View>
       </View>
-    </Modal>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "rgba(0,0,0,0.5)",
+    backgroundColor: "rgba(255, 255, 255, 0.5)",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -83,6 +67,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 20,
     gap: 20,
+    elevation: 5,
   },
   text: {
     fontSize: 26,
@@ -124,6 +109,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     paddingHorizontal: 15,
+    width: "100%",
   },
   textButtonSave: {
     color: "#fff",

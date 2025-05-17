@@ -2,8 +2,8 @@ import { useIsFocused } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import { FlatList, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import useStorage from "../../hooks/useStorage";
-import PasswordItem from "../../components/password";
+import useStorage from "../../../hooks/useStorage";
+import PasswordItem from "../../../components/password";
 
 export default function PasswordScreen() {
   const [listPasswords, setListPasswords] = useState([]);
@@ -21,7 +21,7 @@ export default function PasswordScreen() {
     loadPasswordsList();
   }, [focus]);
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <View style={{ flex: 1 }}>
       <View style={styles.header}>
         <Text style={styles.title}>Minhas senhas</Text>
       </View>
@@ -42,7 +42,7 @@ export default function PasswordScreen() {
           );
         }}
       />
-    </SafeAreaView>
+    </View>
   );
 }
 
