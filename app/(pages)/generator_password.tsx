@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import ModalPassword from "../../../components/modal";
+import ModalPassword from "../../components/modal";
 import { Divider } from "react-native-paper";
 import { estilos } from "../../global_styles/styles";
 let charset =

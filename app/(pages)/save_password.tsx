@@ -1,6 +1,6 @@
 import { TextInput, View, Text, StyleSheet, Pressable } from "react-native";
 import { useState } from "react";
-import useStorage from "../../../hooks/useStorage";
+import useStorage from "../../hooks/useStorage";
 import * as Clipboard from "expo-clipboard";
 export default function SavePassword() {
   const { saveItem, getItem, removeItem } = useStorage();
