@@ -1,7 +1,7 @@
+import { router } from "expo-router";
 import { Pressable, Text, View } from "react-native";
 import { Divider } from "react-native-paper";
 import { estilos } from "../../global_styles/styles";
-import { router } from "expo-router";
 
 export default function HomeScreen() {
   return (
@@ -17,7 +17,9 @@ export default function HomeScreen() {
       <View style={{ width: "100%", marginVertical: "auto", padding: 10 }}>
         <Pressable
           style={estilos.ButtonRouter}
-          onPress={() => {router.push("/save_password")}}
+          onPress={() => {
+            router.push("/save_password");
+          }}
         >
           <Text style={estilos.Text}>Guarde uma senha</Text>
         </Pressable>
@@ -45,7 +47,9 @@ export default function HomeScreen() {
         </View>
         <Pressable
           style={estilos.ButtonRouter}
-          onPress={() => {router.push('/generator_password')}}
+          onPress={() => {
+            router.push("/generator_password");
+          }}
         >
           <Text style={estilos.Text}>Crie uma</Text>
         </Pressable>
