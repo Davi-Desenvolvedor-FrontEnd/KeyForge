@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "latest",
-    "slug": "latest",
+    "name": "KeyForge",
+    "slug": "KeyForge",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/logoApp.png",
-    "scheme": "latest",
+    "scheme": "keyforge",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -16,7 +16,8 @@
         "foregroundImage": "./assets/images/logoApp.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.daviaugusto479.KeyForge"
     },
     "web": {
       "bundler": "metro",
@@ -37,6 +38,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "3c0ca6b2-9798-4adb-b25b-9395219c2e58"
+      }
     }
   }
 }
