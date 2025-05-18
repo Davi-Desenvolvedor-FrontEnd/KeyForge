@@ -1,6 +1,6 @@
+import Header from "@/components/Header";
 import { router } from "expo-router";
 import { Pressable, Text, View } from "react-native";
-import { Divider } from "react-native-paper";
 import { estilos } from "../../global_styles/styles";
 
 export default function HomeScreen() {
@@ -10,10 +10,9 @@ export default function HomeScreen() {
         gap: 20,
         height: "100%",
         justifyContent: "center",
-        backgroundColor: "#fff",
       }}
     >
-      <Text style={estilos.Title}>KeyForge</Text>
+      <Header title="Key Forge" />
       <View style={{ width: "100%", marginVertical: "auto", padding: 10 }}>
         <Pressable
           style={estilos.ButtonRouter}
@@ -35,13 +34,11 @@ export default function HomeScreen() {
             alignSelf: "center",
           }}
         >
-          <Divider
-            bold
+          <View
             style={{ backgroundColor: "#000", height: 1, width: "100%" }}
           />
           <Text>Ou</Text>
-          <Divider
-            bold
+          <View
             style={{ backgroundColor: "#000", height: 1, width: "100%" }}
           />
         </View>

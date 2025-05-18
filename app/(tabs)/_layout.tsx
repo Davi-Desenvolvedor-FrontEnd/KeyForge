@@ -1,9 +1,8 @@
-import { View } from "react-native";
-import { router, Tabs } from "expo-router";
-import React from "react";
-import Ionicons from "@expo/vector-icons/Ionicons";
-import { StatusBar } from "expo-status-bar";
 import { FontAwesome } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
+import { router, Tabs } from "expo-router";
+import { StatusBar } from "expo-status-bar";
+import React from "react";
 export default function TabsLayout() {
   const color = "#000";
   return (
@@ -66,13 +65,13 @@ export default function TabsLayout() {
                   onPress={() => router.back()}
                   size={25}
                   color={"black"}
-                  style={{ marginHorizontal: 10 }}
+                  style={{ marginHorizontal: 10, padding: 10 }}
                 />
               );
             },
             tabBarStyle: {
               display: "none",
-            }
+            },
           }}
         />
         <Tabs.Screen
@@ -89,13 +88,13 @@ export default function TabsLayout() {
                   onPress={() => router.back()}
                   size={25}
                   color={"black"}
-                  style={{ marginHorizontal: 10 }}
+                  style={{ marginHorizontal: 10, padding: 10 }}
                 />
               );
             },
             tabBarStyle: {
               display: "none",
-            }
+            },
           }}
         />
       </Tabs>

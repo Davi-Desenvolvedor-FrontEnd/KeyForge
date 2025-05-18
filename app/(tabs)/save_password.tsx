@@ -1,7 +1,8 @@
-import { TextInput, View, Text, StyleSheet, Pressable } from "react-native";
-import { useState } from "react";
-import useStorage from "../../hooks/useStorage";
+import { estilos } from "@/global_styles/styles";
 import * as Clipboard from "expo-clipboard";
+import { useState } from "react";
+import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import useStorage from "../../hooks/useStorage";
 export default function SavePassword() {
   const { saveItem } = useStorage();
   const [name, setName] = useState("");
@@ -24,15 +25,17 @@ export default function SavePassword() {
   return (
       <View style={styles.container}>
         <View style={styles.box}>
+          <Text style={estilos.Label}>Guarde uma senha</Text>
           <TextInput
-            style={styles.input}
+            style={estilos.Input}
             placeholder="sua senha"
             placeholderTextColor={'#666'}
             value={password}
             onChangeText={(text) => setPassword(text)}
           />
+          <Text style={estilos.Label}>Nome da senha</Text>
           <TextInput
-            style={styles.input}
+            style={estilos.Input}
             placeholder="nome da senha"
             placeholderTextColor={'#666'}
             value={name}
@@ -64,9 +67,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     borderRadius: 10,
     justifyContent: "center",
-    alignItems: "center",
     padding: 20,
-    gap: 20,
     elevation: 5,
   },
   text: {

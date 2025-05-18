@@ -1,8 +1,9 @@
+import Header from "@/components/Header";
 import { useIsFocused } from "@react-navigation/native";
 import { useEffect, useState } from "react";
-import { FlatList, StyleSheet, Text, View } from "react-native";
-import useStorage from "../../hooks/useStorage";
+import { FlatList, StyleSheet, View } from "react-native";
 import PasswordItem from "../../components/PasswordItem";
+import useStorage from "../../hooks/useStorage";
 
 type PasswordItemType = {
   id: number;
@@ -27,9 +28,7 @@ export default function PasswordScreen() {
   }, [focus]);
   return (
     <View style={{ flex: 1 }}>
-      <View style={styles.header}>
-        <Text style={styles.title}>Minhas senhas</Text>
-      </View>
+      <Header title="Minhas senhas" />
       <FlatList
         keyExtractor={(item) => item.id.toString()}
         data={listPasswords}
